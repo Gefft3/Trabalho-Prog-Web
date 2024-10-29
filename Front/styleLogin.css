@@ -1,4 +1,6 @@
+
 body {
+    font: 16px Candara, sans-serif;
     background-color: #bfc0dc;
 }
 
@@ -35,7 +37,6 @@ form {
 button {
     background-color: black;
     color: white;
-    text-decoration: underline;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 15px;
@@ -47,5 +48,5 @@ button:hover {
 }
 
 a {
-    color: black;
+  color: black;
 }
