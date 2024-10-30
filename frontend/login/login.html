@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styleLogin.css">
+    <script src="apiLogin.js"></script>
     <title>Login</title>
 </head>
 <body>
 
     <main>
-        <form>
+        <form id="loginForm">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="value" required>
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="value" required>
-            <button type="submit">Entrar</button>
+            <button type="submit" onclick="loginUser()">Entrar</button>
         </form>
         <span><a href="">Esqueceu sua senha?</a></span>
     </main>
