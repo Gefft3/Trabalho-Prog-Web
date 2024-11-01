@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-br">
+  
+  <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Página de cadastro do sistema Correio Web.">
+    <meta name="keywords" content="Cadastro, Caixa Postal, Correio Web, Sign up, Registro, Register">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--ícones-->
+    <link rel="stylesheet" type="text/css" href="styleRegister.css">
+    <!-- <script src=".js"></script> -->
+    <title>Cadastro</title>
+  </head>
+  
+  <body>
+    <main>
+      <div id="welcome-container">
+        <i class="fa-solid fa-envelope"></i> <!--Ícone envelope-->
+        <h3>Bem-vindo(a) ao Correio Web!</h3>  
+      </div>
+      <form id="registerForm">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" placeholder="Digite seu nome completo" required>
+
+        <label for="dateBirth">Data de nascimento</label>
+        <input type="date" name="dateBirth" id="dateBirth" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+
+        <label for="password">Senha</label>
+        <div id="password-container">
+          <input type="password" name="password" id="password" placeholder="Crie uma senha" required>
+          <i class="fas fa-eye" id="togglePassword"></i> <!--Ícone para mostrar a senha-->
+        </div>
+        
+        <button type="submit">Criar conta</button>
+      </form>
+      <p id="p-login">Já tem uma conta?<a href="" id="a-login">Entrar</a></p><!--Direcionar para a página de login-->
+    </main>
+  </body>
+  
 </html>
