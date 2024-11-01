@@ -12,7 +12,7 @@ main {
     background-color: #e6e6e6;
     margin-top: 3%;
     margin-right: 35%; /* Ajuste o valor para aumentar o tamanho do quadrado */
-    margin-left: 35%; /* Ajuste o valor para aumentar o tamanho do quadrado */
+    margin-left: 40.7%; /* Ajuste o valor para aumentar o tamanho do quadrado */
     max-width: 310px; /* Defina o tamanho máximo desejado */
     min-width: auto;
 }
