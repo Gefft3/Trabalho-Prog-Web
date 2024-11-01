@@ -1,52 +1,116 @@
 
 body {
-    font: 16px Candara, sans-serif;
+    font: 16px Arial, sans-serif;
     background-color: #bfc0dc;
-}
-
-main {
+  }
+  
+  main {
     align-content: center;
     justify-content: center;
-    border: 1px solid black;
     border-radius: 10px;
-    padding: 10px;  
+    padding: 20px;  
     background-color: #e6e6e6;
-    margin-top: 5%;
-    margin-right: 40%;
-    margin-left: 40%;
-    padding-bottom: 7%;
+    margin-top: 10%;
+    margin-right: 35%;
+    margin-left: 35%;
+    max-width: 310px; /* Defina o tamanho máximo desejado */
+    min-width: auto;
+  }
+  
+  #welcome-container {
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin: 10px; /* Espaçamento opcional */
+    padding-bottom: 1%;
     padding-top: 1%;
-}
-
-form {
+    margin-top: 1%;
+  }
+  
+  #welcome-container i {
+    font-size: 45px; /* Aumenta o tamanho do ícone */
+    margin: auto; /* Centraliza o ícone */
+    color: black;
+  }
+  
+  #welcome-container h3 {
+    margin-top: 15px; 
+    margin-bottom: 10px;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-}
-
-#email, #password {
+  }
+  
+  #email, #password {
     margin: 5px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
     border: none;
-    
-}
-
-button {
+  }
+  
+  #password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
+  
+  #password-container i {
+    display: none; /* Oculta o ícone inicialmente */
+    position: absolute;
+    right: 10px;
+    top: 83%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+  }
+  
+  #password {
+    margin-bottom: -13px; /* Reduz a margem abaixo do campo de senha */
+  }
+  
+  #password-recovery {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-size: 0.8em; /* Ajusta o tamanho da fonte */
+    display: inline-block; 
+    margin-top: 1px; /* Ajusta o espaço acima do link */
+    margin-left: 7px;
+  }
+  
+  #password-recovery:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+  
+  button {
     background-color: black;
     color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
     margin-bottom: 15px;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #333333;
     cursor: pointer;
-}
-
-a {
-  color: black;
-}
+  }
+  
+  #p-register, #a-register  {
+    display: block; 
+    margin: auto;
+    width: fit-content;
+  }
+  
+  #a-register {
+    text-decoration: none; /* Remove o sublinhado padrão */
+  }
+  
+  #a-register:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+  
+  a {
+    color: black;
+  }
