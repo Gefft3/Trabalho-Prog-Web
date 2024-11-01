@@ -30,8 +30,8 @@
 
         <label for="password">Senha</label>
         <div id="password-container">
-          <input type="password" name="password" id="password" placeholder="Crie uma senha" required>
-          <i class="fas fa-eye" id="togglePassword"></i> <!--Ícone para mostrar a senha-->
+          <input type="password" name="password" id="password" oninput="iconVisibility()" placeholder="Crie uma senha" required>
+          <i class="fas fa-eye" id="togglePassword" onclick="passwordVisibility()"></i> <!--Ícone para mostrar a senha-->
         </div>
         
         <button type="submit">Criar conta</button>
