@@ -1,0 +1,100 @@
+
+body {
+    font: 16px Arial,sans-serif;
+    background-color: #bfc0dc;
+  }
+  
+main {
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px; 
+    background-color: #e6e6e6;
+    margin-top: 6%;
+    margin-right: 35%; /* Ajuste o valor para aumentar o tamanho do quadrado */
+    margin-left: 35%; /* Ajuste o valor para aumentar o tamanho do quadrado */
+    max-width: 310px; /* Defina o tamanho máximo desejado */
+    min-width: auto;
+}
+  
+#welcome-container {
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin: 10px; /* Espaçamento opcional */
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-top: 1%;
+}
+  
+#welcome-container i {
+    font-size: 45px; /* Aumenta o tamanho do ícone */
+    margin: auto; /* Centraliza o ícone */
+    color: black;
+}
+  
+#welcome-container h3 {
+    margin-top: 15px; 
+    margin-bottom: 10px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+  
+#name, #dateBirth, #email, #password {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+  
+#password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+  
+#password-container i {
+    display: none; /* Oculta o ícone inicialmente */
+    position: absolute;
+    right: 10px;
+    top: 40%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+  
+button {
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+  
+button:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+  
+#p-login, #a-login  {
+    display: block; 
+    margin: auto;
+    width: fit-content;
+}
+  
+#a-login {
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+  
+#a-login:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+  
+a {
+    color: black;
+}
