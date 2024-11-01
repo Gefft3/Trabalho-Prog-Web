@@ -2,6 +2,8 @@
 body {
     font: 16px Arial,sans-serif;
     background-color: #bfc0dc;
+    display: flex;
+    align-items: center;
   }
   
 main {
@@ -10,9 +12,7 @@ main {
     border-radius: 10px;
     padding: 20px; 
     background-color: #e6e6e6;
-    margin-top: 3%;
-    margin-right: 35%; /* Ajuste o valor para aumentar o tamanho do quadrado */
-    margin-left: 40.7%; /* Ajuste o valor para aumentar o tamanho do quadrado */
+    margin: 10% auto 0 auto; /* Ajuste o valor para aumentar o tamanho do quadrado */
     max-width: 310px; /* Defina o tamanho máximo desejado */
     min-width: auto;
 }
