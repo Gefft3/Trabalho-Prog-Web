@@ -15,7 +15,7 @@ GET http://localhost:3000/api/users
 
 ###
 
-### Atualizar um usuário (nao ta funcionando ainda)
+### Atualizar um usuário 
 PUT http://localhost:3000/api/users/1
 Content-Type: application/json
 
@@ -27,5 +27,5 @@ Content-Type: application/json
 
 ###
 
-### Deletar um usuário (nao ta funcionando ainda)
+### Deletar um usuário
 DELETE http://localhost:3000/api/users/1
