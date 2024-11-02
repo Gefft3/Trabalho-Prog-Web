@@ -29,8 +29,8 @@ O backend foi desenvolvido com **Node.js**. Para executá-lo, você precisará t
 Para conectar ao banco de dados, você precisa ter o PostgreSQL instalado e configurar um arquivo .env (/backend/.env.example) com as seguintes informações:
 
 - **DB_NAME**: nome do banco de dados (recomendado: correio_web)
-- **DB_USER**: seu usuário do PostgreSQL com permissões para acessar o banco
-- **DB_PASSWORD**: senha do seu usuário
+- **DB_USER**: seu usuário do PostgreSQL com permissões para acessar o banco (recomendado: postgres)
+- **DB_PASSWORD**: senha do seu usuário (recomendado: 12345)
 
 Após configurar o arquivo .env, siga estas etapas:
 
