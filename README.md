@@ -53,5 +53,5 @@ A conexão com o banco de dados deve ser estabelecida com sucesso.
 
 ### Testes 
 
-Há um arquivo chamado `testes.http`, que permite fazer requisições manualmente. Recomenda-se criar um usuário utilizando este arquivo e tentar fazer login com as credenciais no `login.html`. O esperado é que apareça um alerta com a mensagem "deu certo".
+Há um arquivo chamado `testes.http`, que permite fazer requisições manualmente (é possível utilizar a extensão REST Client). Recomenda-se criar um usuário utilizando este arquivo e tentar fazer login com as credenciais no `login.html` (utilizando a extensão Live Preview). O esperado é que seja direcionado para uma página 'home.html' que ainda está em desenvolvimento.
 
