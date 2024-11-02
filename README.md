@@ -8,7 +8,7 @@ O frontend foi construído utilizando apenas HTML, CSS e JavaScript, portanto, n
 
 ## Backend
 
-O backend foi desenvolvido com **Node.js**. Para executá-lo, você precisará ter o Node.js instalado. É recomendado utilizar a versão **12.22.9** ou superior para o Node e **6.14.15** ou superior para o npm.
+O backend foi desenvolvido com **Node.js**. Para executá-lo, você precisará ter o Node.js instalado. É recomendado utilizar a versão **12.22.9** ou superior para o Node e **6.14.15** ou superior para o npm (se você estiver utilizando o sistema operacional Windows, talvez seja necessário configurar as 'Variáveis de Ambiente' com o PATH do diretório onde o PostgreSQL foi instalado na sua máquina para poder usar o banco pelo terminal do Visual Studio Code)
 
 ### Instalação
 
