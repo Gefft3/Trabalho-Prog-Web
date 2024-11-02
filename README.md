@@ -4,7 +4,7 @@ Este projeto foi dividido em duas partes: **backend** e **frontend**.
 
 ## Frontend
 
-O frontend foi construído utilizando apenas HTML, CSS e JavaScript, portanto, não há requisitos específicos. Recomenda-se a instalação de uma extensão para facilitar a visualização, como **Live Preview** ou **Live Server**.
+O frontend foi construído utilizando apenas HTML, CSS e JavaScript, portanto, não há requisitos específicos. Recomenda-se a instalação de uma extensão para facilitar a visualização, como **Live Preview** (mais recomendado) ou **Live Server**.
 
 ## Backend
 
