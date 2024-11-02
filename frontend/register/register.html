@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--ícones-->
     <link rel="stylesheet" type="text/css" href="styleRegister.css">
+    <script src="apiRegister.js"></script>
     <script src="script.js" async></script>
     <title>Cadastro</title>
   </head>
@@ -34,7 +35,7 @@
           <i class="fas fa-eye" id="togglePassword" onclick="passwordVisibility()"></i> <!--Ícone para mostrar a senha-->
         </div>
         
-        <button type="submit">Criar conta</button>
+        <button type="submit" onclick="registerUser()">Criar conta</button>
       </form>
       <p id="p-login">Já tem uma conta?<a href="/login.html" id="a-login">Entrar</a></p><!--Direciona para a página de login-->
     </main>

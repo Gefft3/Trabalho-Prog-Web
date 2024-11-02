@@ -1,4 +1,10 @@
-async function loginUser() {
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('loginForm').addEventListener('submit', loginUser);
+}); 
+
+async function loginUser(event) {
+    event.preventDefault();
+
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
@@ -16,13 +22,13 @@ async function loginUser() {
         const data = await response.json();
 
         if (response.ok) {
-            alert('deu certo');
-            console.log('deu certo');
+            console.log('Logou!');
+            window.location.href = 'http://127.0.0.1:3001/frontend/home/home.html'
         } else {
-            alert(`deu errado, pq: ${data.message}`);
+            alert(`${data.message}`);
         }
     } catch (error) {
-        console.error('deu errado', error);
-        alert('deu errado');
+        console.error(error);
+        alert(error);
     }
 }
