@@ -25,7 +25,7 @@ async function registerUser(event) {
         if (response.ok) {
             alert('Registro bem-sucedido!');
             console.log('Usuário cadastrado!');
-            window.location.href = 'http://127.0.0.1:3001/frontend/login/login.html';
+            window.location.href = '../login/login.html';
         } else {
             alert(`Erro: ${data.message}`);
         }
