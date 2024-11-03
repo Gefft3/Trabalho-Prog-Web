@@ -23,7 +23,7 @@ async function loginUser(event) {
 
         if (response.ok) {
             console.log('Logou!');
-            window.location.href = 'http://127.0.0.1:3001/frontend/home/home.html'
+            window.location.href = '../home/home.html';
         } else {
             alert(`${data.message}`);
         }
