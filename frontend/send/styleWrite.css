@@ -1,0 +1,111 @@
+body {
+  font: 16px Arial, sans-serif;
+  background-color: #bfc0dc;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4b0082;
+  color: white;
+  padding: 10px;
+  display: flex;
+
+  align-items: center;
+}
+
+header h1 {
+  margin: 0px;
+}
+
+header i {
+  font-size: 29px;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+nav button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #4b0082;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+nav button:hover {
+  background-color: #333333;
+  color: #f9f9f9;
+}
+
+nav button.active {
+  text-decoration: underline;
+  /* Ajusta a distância do sublinhado */
+  text-underline-offset: 3px;
+}
+
+#write-sec {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+main {
+  margin-top: -20px;
+  padding: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333333;
+}
