@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Página de login do sistema Correio Web.">
-    <meta name="keywords" content="Login, Caixa Postal, Correio Web, Sign in, Entrar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--ícones-->
-    <link rel="stylesheet" type="text/css" href="styleLogin.css">
-    <script src="apiLogin.js"></script>
-    <script src="visibility.js" async></script>
-    <title>Login</title>
-  </head>
-  
-  <body>
-    <main>
-      <div id="welcome-container">
-        <i class="fa-solid fa-envelope"></i><!--Ícone envelope-->
-        <h3>Bem-vindo(a) ao Correio Web!</h3>  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Página de login do sistema Correio Web.">
+  <meta name="keywords" content="Login, Caixa Postal, Correio Web, Sign in, Entrar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!--ícones-->
+  <link rel="stylesheet" type="text/css" href="styleLogin.css">
+  <script src="apiLogin.js"></script>
+  <script src="visibility.js" async></script>
+  <title>Login</title>
+</head>
+
+<body>
+
+  <main>
+    <div id="welcome-container">
+      <i class="fa-solid fa-envelope"></i><!--Ícone envelope-->
+      <h3>Bem-vindo(a) ao Correio Web!</h3>
+    </div>
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+
+      <label for="password">Senha</label>
+      <div id="password-container">
+        <input type="password" name="password" id="password" oninput="iconVisibility()" placeholder="Digite sua senha"
+          required>
+        <i class="fas fa-eye" id="togglePassword" onclick="passwordVisibility()"></i> <!--Ícone para mostrar a senha-->
       </div>
-      <form id="loginForm">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-      
-        <label for="password">Senha</label>
-        <div id="password-container">
-          <input type="password" name="password" id="password" oninput="iconVisibility()" placeholder="Digite sua senha" required>
-          <i class="fas fa-eye" id="togglePassword" onclick="passwordVisibility()"></i> <!--Ícone para mostrar a senha-->
-        </div>
-    
-        <p><a href="" id="password-recovery">Esqueceu sua senha?</a></p>
-          
-        <button type="submit" onclick="loginUser()">Entrar</button>
-      </form>
-      <p id ="p-register">Ainda não está no Correio Web?<a href="../register/register.html" id="a-register">Crie uma conta.</a></p> <!--Direcionar para a página de cadastro-->
-    </main>
-  </body>
+
+      <p><a href="" id="password-recovery">Esqueceu sua senha?</a></p>
+
+      <button type="submit" onclick="loginUser()">Entrar</button>
+    </form>
+    <p id="p-register">Ainda não está no Correio Web?<a href="../register/register.html" id="a-register">Crie uma conta.</a></p> <!--Direcionar para a página de cadastro-->
+  </main>
+</body>
 
 </html>

@@ -3,53 +3,55 @@ body {
     background-color: #bfc0dc;
     display: flex;
     align-items: center;
-  }
-  
+}
+
 main {
     align-content: center;
     justify-content: center;
     border-radius: 10px;
-    padding: 20px;  
-    background-color: #e6e6e6;
+    padding: 20px;
+    background-color: #e8eaf6;
     margin: 10% auto 0 auto;
-    max-width: 310px; 
+    max-width: 310px;
     min-width: auto;
+    margin-top: 80px;
 }
-  
+
 #welcome-container {
-    text-align: center; 
-    margin: 10px; 
+    text-align: center;
+    margin: 10px;
     padding-bottom: 1%;
     padding-top: 1%;
     margin-top: 1%;
 }
-  
+
 #welcome-container i {
-    font-size: 45px; 
-    margin: auto; 
+    font-size: 45px;
+    margin: auto;
     color: black;
 }
-  
+
 #welcome-container h3 {
-    margin-top: 15px; 
+    margin-top: 15px;
     margin-bottom: 10px;
 }
-  
+
 form {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
 }
-  
-#email, #password {
+
+#email,
+#password {
     margin: 5px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
     border: none;
 }
-  
+
 #password-container {
     position: relative;
     display: flex;
@@ -57,32 +59,32 @@ form {
     align-items: left;
     justify-content: center;
 }
-  
+
 #password-container i {
-    display: none; 
+    display: none;
     position: absolute;
     right: 10px;
-    top: 83%; 
-    transform: translateY(-50%); 
+    top: 83%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
-  
+
 #password {
-    margin-bottom: -13px; 
+    margin-bottom: -13px;
 }
-  
+
 #password-recovery {
-    text-decoration: none; 
-    font-size: 0.8em; 
-    display: inline-block; 
-    margin-top: 1px; 
+    text-decoration: none;
+    font-size: 0.8em;
+    display: inline-block;
+    margin-top: 1px;
     margin-left: 7px;
 }
-  
+
 #password-recovery:hover {
     text-decoration: underline;
 }
-  
+
 button {
     background-color: black;
     border-radius: 5px;
@@ -90,26 +92,27 @@ button {
     color: white;
     margin-bottom: 15px;
 }
-  
+
 button:hover {
     background-color: #333333;
     cursor: pointer;
 }
-  
-#p-register, #a-register  {
-    display: block; 
+
+#p-register,
+#a-register {
+    display: block;
     margin: auto;
     width: fit-content;
 }
-  
+
 #a-register {
-    text-decoration: none; 
+    text-decoration: none;
 }
-  
+
 #a-register:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
-  
+
 a {
     color: black;
 }

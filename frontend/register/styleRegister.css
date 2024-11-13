@@ -1,56 +1,65 @@
-
 body {
-    font: 16px Arial,sans-serif;
+    font: 16px Arial, sans-serif;
     background-color: #bfc0dc;
     display: flex;
     align-items: center;
-  }
-  
+}
+
 main {
     align-content: center;
     justify-content: center;
     border-radius: 10px;
-    padding: 20px; 
-    background-color: #e6e6e6;
-    margin: 10% auto 0 auto; /* Ajuste o valor para aumentar o tamanho do quadrado */
-    max-width: 310px; /* Defina o tamanho máximo desejado */
+    padding: 20px;
+    background-color: #e8eaf6;
+    margin: 10% auto 0 auto;
+    /* Ajuste o valor para aumentar o tamanho do quadrado */
+    max-width: 310px;
+    /* Defina o tamanho máximo desejado */
     min-width: auto;
+    margin-top: 30px;
 }
-  
+
 #welcome-container {
-    text-align: center; /* Alinha o conteúdo ao centro */
-    margin: 10px; /* Espaçamento opcional */
+    text-align: center;
+    /* Alinha o conteúdo ao centro */
+    margin: 10px;
+    /* Espaçamento opcional */
     padding-bottom: 1%;
     padding-top: 1%;
     margin-top: 1%;
 }
-  
+
 #welcome-container i {
-    font-size: 45px; /* Aumenta o tamanho do ícone */
-    margin: auto; /* Centraliza o ícone */
+    font-size: 45px;
+    /* Aumenta o tamanho do ícone */
+    margin: auto;
+    /* Centraliza o ícone */
     color: black;
 }
-  
+
 #welcome-container h3 {
-    margin-top: 15px; 
+    margin-top: 15px;
     margin-bottom: 10px;
 }
-  
+
 form {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
 }
-  
-#name, #dateBirth, #email, #password {
+
+#name,
+#dateBirth,
+#email,
+#password {
     margin: 5px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
     border: none;
 }
-  
+
 #password-container {
     position: relative;
     display: flex;
@@ -58,16 +67,17 @@ form {
     align-items: left;
     justify-content: center;
 }
-  
+
 #password-container i {
-    display: none; /* Oculta o ícone inicialmente */
+    /* Oculta o ícone inicialmente */
+    display: none;
     position: absolute;
     right: 10px;
-    top: 40%; 
-    transform: translateY(-50%); 
+    top: 40%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
-  
+
 button {
     background-color: black;
     color: white;
@@ -75,26 +85,30 @@ button {
     padding: 8px;
     margin-bottom: 15px;
 }
-  
+
 button:hover {
     background-color: #333333;
     cursor: pointer;
 }
-  
-#p-login, #a-login  {
-    display: block; 
+
+#p-login,
+#a-login {
+    display: block;
     margin: auto;
     width: fit-content;
 }
-  
+
 #a-login {
-    text-decoration: none; /* Remove o sublinhado padrão */
+    /* Remove o sublinhado padrão */
+    text-decoration: none;
+
 }
-  
+
 #a-login:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
-  
+
 a {
     color: black;
 }

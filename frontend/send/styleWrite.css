@@ -6,12 +6,12 @@ body {
 }
 
 header {
-  background-color: #4b0082;
-  color: white;
+  background-color: #bfc0dc;
+  color: black;
   padding: 10px;
   display: flex;
-
   align-items: center;
+  justify-content: center;
 }
 
 header h1 {
@@ -19,10 +19,10 @@ header h1 {
 }
 
 header i {
-  font-size: 29px;
-  color: white;
+  font-size: 30px;
+  color: black;
   margin-right: 10px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 nav {
@@ -31,8 +31,8 @@ nav {
   justify-content: space-around;
   margin: 20px;
   border-radius: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 nav button {
@@ -43,6 +43,7 @@ nav button {
   cursor: pointer;
   font-weight: bold;
   border-radius: 50px;
+  margin: 0;
 }
 
 nav button:hover {
@@ -57,35 +58,23 @@ nav button.active {
 }
 
 #write-sec {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-
-main {
-  margin-top: -20px;
-  padding: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 form {
-  padding: 20px;
-  background-color: white;
+  padding: 15px;
+  background-color: #e8eaf6;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
-
 
 label {
   display: block;
   margin: 10px 0 5px;
-  font-weight: bold;
 }
 
 input[type="email"],
@@ -100,10 +89,10 @@ textarea {
 button {
   background-color: black;
   color: white;
-  padding: 10px;
-  border: none;
+  padding: 6px;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 button:hover {
