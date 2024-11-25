@@ -4,6 +4,8 @@ const getMessages = async (req, res) => {
 
     const email = req.query.email;  // Usando query string para pegar o e-mail
 
+    alert(email);
+
     // Validação simples
     if (!email) {
         return res.status(400).json({ message: 'EMAIL VAZIO' });
@@ -14,7 +16,7 @@ const getMessages = async (req, res) => {
         console.log('Buscando e-mails para o usuário:', email);  // Adicione o log aqui
         // Busca todos os e-mails que têm o 'recipient_email' igual ao e-mail do usuário logado
         const result = await pool.query(
-            'SELECT * FROM emails WHERE recipient_email = $1 ORDER BY send_date DESC',
+            'SELECT * FROM messages WHERE recipient_email = $1 ORDER BY send_date DESC',
             [email] // Passando o e-mail do usuário como parâmetro
         );
 

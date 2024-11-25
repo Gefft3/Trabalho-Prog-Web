@@ -8,6 +8,7 @@ async function getMessages() {
 
         const email = localStorage.getItem('userEmail');
 
+        alert(email)
         // Fazer a requisição GET para buscar os e-mails
         const response = await fetch(`http://localhost:3000/api/home?email=${email}`, {
             method: 'GET',
