@@ -34,6 +34,7 @@ Para conectar ao banco de dados, você precisa ter o PostgreSQL instalado e conf
 
 Após configurar o arquivo .env, siga estas etapas:
 
+1. Acesse o PostgreSQL com usuário postgres e sua senha definida no .env.
 1. Crie um banco de dados com o nome **correio_web**.
 2. Crie uma tabela chamada **users** com os seguintes atributos:
    - **id**: INTEGER 
