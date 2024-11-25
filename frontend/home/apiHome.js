@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 async function getMessages() {
     try {
 
+        const email = localStorage.getItem('userEmail');
+
         // Fazer a requisição GET para buscar os e-mails
-        const response = await fetch('http://localhost:3000/api/home', {
+        const response = await fetch(`http://localhost:3000/api/home?email=${email}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json' 

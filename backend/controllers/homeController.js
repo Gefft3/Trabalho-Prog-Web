@@ -2,7 +2,7 @@ const pool = require('../db');
 
 const getMessages = async (req, res) => {
 
-    const email = req.body.email;
+    const email = req.query.email;  // Usando query string para pegar o e-mail
 
     // Validação simples
     if (!email) {
@@ -28,5 +28,3 @@ const getMessages = async (req, res) => {
         res.status(500).json({ message: 'Erro ao buscar os e-mails.' });
     }
 };
-
-module.exports = { getMessages };
