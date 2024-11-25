@@ -1,4 +1,8 @@
-function expandEmail(emailElement) {
+document.addEventListener('DOMContentLoaded', () => {
+  expandEmail(); 
+});
+
+async function expandEmail(emailElement) {
 
     // Verifica se o email já está expandido
     if (emailElement.classList.contains('expanded') === false) {
