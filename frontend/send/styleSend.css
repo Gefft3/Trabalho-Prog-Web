@@ -62,6 +62,18 @@ nav button.active {
   margin-right: 350px;
 }
 
+#feedbackMessage {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  margin-top: 10px;
+}
+
 form {
   padding: 15px;
   background-color: #e8eaf6;

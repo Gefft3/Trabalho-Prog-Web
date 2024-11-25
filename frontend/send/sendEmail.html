@@ -28,6 +28,9 @@
     </nav>
     <section id="write-sec">
       <form id="writeForm">
+        <!-- Mensagem de feedback -->
+        <div id="feedbackMessage"></div>
+
         <label for="to">Para:</label>
         <input type="email" id="to" name="to" placeholder="Destinatário" required>
 
@@ -36,7 +39,6 @@
 
         <label for="body">Mensagem:</label>
         <textarea id="body" name="body" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
         <button type="submit">Enviar</button>
       </form>
     </section>
