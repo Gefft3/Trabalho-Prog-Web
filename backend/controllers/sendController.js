@@ -4,7 +4,7 @@ const sendEmail = async (req, res) => {
 
     try {
         const { subject, content, sendDate, status, senderEmail, recipientEmail } = req.body;
-
+        alert( subject, content, sendDate, status, senderEmail, recipientEmail )
         // Verifica se todos os campos obrigatórios foram fornecidos
         if (!subject || !content || !sendDate || !status || !senderEmail || !recipientEmail) {
             return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
