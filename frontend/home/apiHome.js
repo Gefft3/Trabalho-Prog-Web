@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    getMessages(); 
+    getMessages();
 });
 
 async function getMessages() {
+    
     try {
 
         const email = localStorage.getItem('userEmail');
@@ -11,12 +12,12 @@ async function getMessages() {
         const response = await fetch(`http://localhost:3000/api/home?email=${email}`, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json'
             }
         });
 
-         // Se a requisição for bem-sucedida, retorna os e-mails
-         if (response.ok) {
+        // Se a requisição for bem-sucedida, retorna os e-mails
+        if (response.ok) {
             alert(' CONCLUIDA');
             const data = await response.json();
             console.log(data);
@@ -33,7 +34,7 @@ async function getMessages() {
 
 // Função para exibir os e-mails no formato do HTML
 function displayEmails(emails) {
-    
+
     const emailListContainer = document.querySelector('.email-list');
     emailListContainer.innerHTML = '';
 

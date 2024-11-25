@@ -10,6 +10,8 @@ const getMessages = async (req, res) => {
     }
 
     try {
+
+        console.log('Buscando e-mails para o usuário:', email);  // Adicione o log aqui
         // Busca todos os e-mails que têm o 'recipient_email' igual ao e-mail do usuário logado
         const result = await pool.query(
             'SELECT * FROM emails WHERE recipient_email = $1 ORDER BY send_date DESC',
@@ -24,7 +26,7 @@ const getMessages = async (req, res) => {
         res.json(result.rows); // Retorna os e-mails encontrados
 
     } catch (error) {
-        console.error(error);
+        console.error('Erro ao buscar o email:',error);
         res.status(500).json({ message: 'Erro ao buscar os e-mails.' });
     }
 };
