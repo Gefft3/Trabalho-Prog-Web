@@ -13,10 +13,6 @@ async function sendEmail(event) {
     const sendDate = new Date().toLocaleDateString('pt-BR');
     const status = 'Novo'; // Status fixo como 'Novo'
 
-    console.log(subject, content, recipientEmail, senderEmail, sendDate, status);
-
-    alert('INFORMAÇÕES PEGA DO FORMULARIO COM SUCESSO');
-
     try {
     
         const response = await fetch('http://localhost:3000/api/send', {
@@ -44,7 +40,7 @@ async function sendEmail(event) {
         }
     } catch (error) {
         console.error('Erro ao enviar e-mail:', error);
-        alert('Erro ao enviar e-mail. Tente novamente.', error);
+        alert('Erro ao enviar e-mail. Tente novamente.');
     }
 }
 

@@ -4,7 +4,7 @@ const sendEmail = async (req, res) => {
 
     try {
         const { subject, content, sendDate, status, senderEmail, recipientEmail } = req.body;
-        alert( subject, content, sendDate, status, senderEmail, recipientEmail );
+    
         // Verifica se todos os campos obrigatórios foram fornecidos
         if (!subject || !content || !sendDate || !status || !senderEmail || !recipientEmail) {
             return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
@@ -26,7 +26,7 @@ const sendEmail = async (req, res) => {
 
         // Inserindo o e-mail no banco de dados
         const result = await pool.query(
-            `INSERT INTO message (subject, content, send_date, status, sender_email, recipient_email)
+            `INSERT INTO messages (subject, content, send_date, status, sender_email, recipient_email)
              VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
             [subject, content, sendDate, status, senderEmail, recipientEmail]
         );

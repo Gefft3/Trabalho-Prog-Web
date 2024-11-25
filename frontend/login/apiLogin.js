@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('loginForm').addEventListener('submit', loginUser);
-}); 
+});
 
 async function loginUser(event) {
     event.preventDefault();
@@ -23,6 +23,7 @@ async function loginUser(event) {
 
         if (response.ok) {
             console.log('Logou!');
+            localStorage.setItem('userEmail', email); // Salvando o e-mail do usuário no Local Storage
             window.location.href = '../home/home.html';
         } else {
             alert(`${data.message}`);
