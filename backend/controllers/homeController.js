@@ -28,3 +28,5 @@ const getMessages = async (req, res) => {
         res.status(500).json({ message: 'Erro ao buscar os e-mails.' });
     }
 };
+
+module.exports = {getMessages};
