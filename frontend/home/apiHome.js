@@ -1,27 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    getEmails(); 
+    getMessages(); 
 });
 
-async function getEmails() {
+async function getMessages() {
     try {
-        const response = await fetch('http://localhost:3000/api/emails', {
+
+        // Fazer a requisição GET para buscar os e-mails
+        const response = await fetch('http://localhost:3000/api/home', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json' 
             }
         });
 
-        const data = await response.json();
-
-        if (response.ok) {
-            console.log(data); // Log para verificar a resposta do servidor
-            displayEmails(data); // Chama a função para exibir os e-mails na tela
+         // Se a requisição for bem-sucedida, retorna os e-mails
+         if (response.ok) {
+            alert(' CONCLUIDA');
+            const data = await response.json();
+            console.log(data);
+            displayEmails(data);
         } else {
-            alert(`${data.message}`);
+            alert('ERROR ');
+            throw new Error('Erro ao buscar os e-mails.');
         }
     } catch (error) {
         console.error(error);
-        alert('Erro ao carregar e-mails. Tente novamente.');
+        return []; // Retorna um array vazio caso ocorra algum erro
     }
 }
 

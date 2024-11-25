@@ -1,16 +1,19 @@
-const pool = require('../db'); // Supondo que você está usando PostgreSQL
+const pool = require('../db');
 
 const getMessages = async (req, res) => {
 
-    const userEmail = req.user.email;
+    const email = req.body.email;
 
-    alert(userEmail);
+    // Validação simples
+    if (!email) {
+        return res.status(400).json({ message: 'EMAIL VAZIO' });
+    }
 
     try {
         // Busca todos os e-mails que têm o 'recipient_email' igual ao e-mail do usuário logado
         const result = await pool.query(
             'SELECT * FROM emails WHERE recipient_email = $1 ORDER BY send_date DESC',
-            [userEmail] // Passando o e-mail do usuário como parâmetro
+            [email] // Passando o e-mail do usuário como parâmetro
         );
 
         // Caso não haja e-mails encontrados
