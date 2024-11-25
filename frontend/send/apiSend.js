@@ -15,6 +15,8 @@ async function sendEmail(event) {
 
     console.log(subject, content, recipientEmail, senderEmail, sendDate, status);
 
+    alert('INFORMAÇÕES PEGA DO FORMULARIO COM SUCESSO');
+
     try {
     
         const response = await fetch('http://localhost:3000/api/send', {
