@@ -3,12 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loginUser(event) {
+
     event.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-
-    console.log(email, password);
 
     try {
         const response = await fetch('http://localhost:3000/api/login', {
