@@ -53,11 +53,24 @@ Após configurar o arquivo .env, siga estas etapas:
 5. Crie as tabelas **users** e **messages** com os seguintes atributos
 
     ```bash
-    CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100) UNIQUE, password VARCHAR(255) NOT NULL);
+    CREATE TABLE users (
+       id SERIAL PRIMARY KEY,
+       name VARCHAR(100),
+       email VARCHAR(100) UNIQUE,
+       password VARCHAR(255) NOT NULL
+    );
     ```
     
     ```bash
-     CREATE TABLE messages (id SERIAL PRIMARY KEY, subject VARCHAR(255) NOT NULL, content TEXT NOT NULL, send_date DATE NOT NULL, status VARCHAR(50) NOT NULL, sender_email VARCHAR(255) NOT NULL, recipient_email VARCHAR(255) NOT NULL, CONSTRAINT fk_sender_email FOREIGN KEY (sender_email) REFERENCES users(email) ON DELETE CASCADE, CONSTRAINT fk_recipient_email FOREIGN KEY (recipient_email) REFERENCES users(email) ON DELETE CASCADE);
+     CREATE TABLE messages (
+        id SERIAL PRIMARY KEY,
+        subject VARCHAR(255) NOT NULL,
+        content TEXT NOT NULL,
+        status VARCHAR(50) NOT NULL,
+        send_date DATE NOT NULL,
+        sender_email VARCHAR(255) NOT NULL,
+        recipient_email VARCHAR(255) NOT NULL
+    );
      ```
 ### Testando a Conexão
 
