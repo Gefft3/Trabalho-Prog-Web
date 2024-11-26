@@ -1,8 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Adiciona um listener para expandir os e-mails ao serem clicados
+  // Adiciona o evento de clique para expandir os e-mails
   const emailItems = document.querySelectorAll('.email-item');
   emailItems.forEach(emailItem => {
     emailItem.addEventListener('click', () => expandEmail(emailItem));
+  });
+
+  // Adiciona o delegador de eventos para o clique nos botões de "Marcar como lida"
+  document.querySelector('.email-list').addEventListener('click', (event) => {
+    // Verifica se o clique foi em um botão de "Marcar como lida"
+    if (event.target && event.target.classList.contains('mark-read')) {
+      markAsRead(event);
+    }
   });
 });
 
