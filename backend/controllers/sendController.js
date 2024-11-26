@@ -2,7 +2,7 @@ const pool = require('../db');
 
 const sendEmail = async (req, res) => {
     try {
-        console.log('Requisição recebida na rota /api/send');
+        // console.log('Requisição recebida na rota /api/send');
         // Obtendo dados da requisição
         const { subject, content, sendDate, status, senderEmail, recipientEmail } = req.body;
 
