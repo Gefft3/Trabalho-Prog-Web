@@ -29,3 +29,16 @@ Content-Type: application/json
 
 ### Deletar um usuário
 DELETE http://localhost:3000/api/users/18
+
+###
+
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+    "subject": "Teste de envio de email",
+    "content": "Teste de envio de email",
+    "status": true,
+    "senderEmail": "test@example.com",
+    "recipientEmail": "test2@example.com"
+}
