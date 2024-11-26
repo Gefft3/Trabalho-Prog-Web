@@ -35,8 +35,22 @@ Para conectar ao banco de dados, você precisa ter o PostgreSQL instalado e conf
 Após configurar o arquivo .env, siga estas etapas:
 
 1. Acesse o PostgreSQL com usuário e sua senha definidos no .env.
-2. Crie um banco de dados com o nome **correio_web**.
-3. Crie as tabelas **users** e **messages** com os seguintes atributos
+   
+     ```bash
+   psql -U postgres
+   ```
+     
+3. Crie um banco de dados com o nome **correio_web** e o acesse.
+   
+   ```bash
+   CREATE DATABASE correio_web;
+   ```
+
+    ```bash
+   \c correio_web
+   ```
+   
+5. Crie as tabelas **users** e **messages** com os seguintes atributos
 
     ```bash
     CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100) UNIQUE, password VARCHAR(255) NOT NULL);
