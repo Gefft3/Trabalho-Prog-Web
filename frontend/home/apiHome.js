@@ -26,43 +26,42 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('logout').addEventListener('click', logout);
 });
 
-// async function getMessages() {
-//   try {
-//     const email = localStorage.getItem('email');
-
-//     if (!email) {
-//       alert('E-mail não encontrado no armazenamento local.');
-//       return;
-//     }
-
-//     const response = await fetch(`http://localhost:3000/api/home?email=${email}`, {
-//       method: 'GET',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
-
-//     if (response.ok) {
-//       const data = await response.json();
-
-//       if (data.message) {
-//         alert(data.message);  
-//       } else {
-//         displayEmails(data);  
-//       }
-//     } else {
-//       alert('Erro ao buscar os e-mails.');
-//     }
-//   } catch (error) {
-//     console.error('Erro na requisição:', error);
-//   }
-// }
-
 async function getMessages() {
-  const email = localStorage.getItem('email');
-  console.log(email);
-}
+  try {
+    const email = localStorage.getItem('email');
+    const token = localStorage.getItem('authToken');
 
+    console.log('Token:', localStorage.getItem('authToken'));
+    console.log('Email:', localStorage.getItem('email'));
+
+    if (!email) {
+      alert('E-mail não encontrado no armazenamento local.');
+      return;
+    }
+    
+    const response = await fetch(`http://localhost:3000/api/home?email=${email}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+
+      if (data.message) {
+        alert(data.message);  
+      } else {
+        displayEmails(data);  
+      }
+    } else {
+      alert('Erro ao buscar os e-mails.');
+    }
+  } catch (error) {
+    console.error('Erro na requisição:', error);
+  }
+}
 
 async function markAsRead(event) {
   const emailItem = event.target.closest('.email-item');
@@ -182,7 +181,8 @@ async function deleteEmail(emailId, emailItem) {
 }
 
 function logout() {
-  localStorage.removeItem('userEmail'); 
+  localStorage.removeItem('email');
+  localStorage.removeItem('authToken'); 
   alert('Você foi desconectado!');
   window.location.href = '../login/login.html';
 }

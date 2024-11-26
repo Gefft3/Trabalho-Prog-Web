@@ -42,3 +42,9 @@ Content-Type: application/json
     "senderEmail": "test@example.com",
     "recipientEmail": "test2@example.com"
 }
+
+
+### Obter informações da home
+GET http://localhost:3000/api/home?email=test@example.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImlhdCI6MTczMjYzODc5NiwiZXhwIjoxNzMyNjQyMzk2fQ.d2RydjXYV-BOhGCJ3bHrUfYk0RWnaLWbQWNE2-1f2jo
+Content-Type: application/json
