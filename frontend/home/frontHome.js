@@ -2,17 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // Adiciona o evento de clique para expandir os e-mails
   const emailItems = document.querySelectorAll('.email-item');
   emailItems.forEach(emailItem => {
-    emailItem.addEventListener('click', () => expandEmail(emailItem));
+    emailItem.addEventListener('click', (event) => {
+      // Verifica se o clique não foi no botão "Marcar como lida"
+      if (!event.target.classList.contains('mark-read')) {
+        expandEmail(emailItem);
+      }
+    });
   });
 
-  // Adiciona o delegador de eventos para o clique nos botões de "Marcar como lida"
-  document.querySelector('.email-list').addEventListener('click', (event) => {
-    // Verifica se o clique foi em um botão de "Marcar como lida"
-    if (event.target && event.target.classList.contains('mark-read')) {
+  // Adiciona o evento de clique para os botões "Marcar como lida"
+  document.querySelectorAll('.mark-read').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation(); // Impede a propagação do evento para o item de e-mail
       markAsRead(event);
-    }
+    });
   });
 });
+
 
 async function expandEmail(emailElement) {
   // Verifica se o elemento existe antes de acessar suas propriedades
