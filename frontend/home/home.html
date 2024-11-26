@@ -9,7 +9,8 @@
   <!--ícones-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="styleHome.css">
-  <script src="scriptFront.js" async></script>
+  <script src="apiHome.js"></script>
+  <script src="frontHome.js"></script>
   <title>Home</title>
 </head>
 
@@ -23,23 +24,25 @@
   <main>
     <nav>
       <button type="button" class="active">Caixa de Entrada</button>
-      <button onclick="window.location.href='../send/writeEmail.html'">Escrever E-mail</button>
+      <button onclick="window.location.href='../send/sendEmail.html'">Escrever E-mail</button>
     </nav>
     <section class="email-list">
-      <div class="email-item" onclick="expandEmail(this)">
+
+      <div class="email-item" >
         <div class="email-info">
           <span class="sender">equipecorreioweb@saudação.com</span>
           <span class="subject">Assunto: Bem vindo(a)</span>
           <span class="status">Status: Novo</span>
           <span class="date">12/11/2024</span>
         </div>
-        <p>Oiee, é um prazer tê-lo(a) por aqui. Estamos muito felizes que você escolheu fazer parte da nossa comunidade!</p>
+        <p>Oiee, é um prazer tê-lo(a) por aqui. Estamos muito felizes que você escolheu fazer parte da nossa comunidade!
+        </p>
         <div class="email-actions">
-          <button class="reply">Responder</button>
           <button class="mark-read">Marcar como lida</button>
           <button class="delete">Deletar</button>
         </div>
       </div>
+
     </section>
   </main>
 </body>

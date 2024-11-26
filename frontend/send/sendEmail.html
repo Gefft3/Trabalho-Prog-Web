@@ -8,8 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--ícones-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styleWrite.css">
-  <script src="scriptReply.js" async></script>
+  <link rel="stylesheet" href="styleSend.css">
+  <script src="frontSend.js" async></script>
+  <script src="apiSend.js"></script>
   <title>Write e-mail</title>
 </head>
 
@@ -27,6 +28,9 @@
     </nav>
     <section id="write-sec">
       <form id="writeForm">
+        <!-- Mensagem de feedback -->
+        <div id="feedbackMessage"></div>
+
         <label for="to">Para:</label>
         <input type="email" id="to" name="to" placeholder="Destinatário" required>
 
@@ -35,7 +39,6 @@
 
         <label for="body">Mensagem:</label>
         <textarea id="body" name="body" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
         <button type="submit">Enviar</button>
       </form>
     </section>
