@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     getMessages();
+      // Atribui o evento de clique a todos os botões de "Marcar como lida" após o carregamento
+      document.querySelectorAll('.mark-read').forEach(button => {
+        button.addEventListener('click', markAsRead);
+    });
 });
 
 async function getMessages() {
