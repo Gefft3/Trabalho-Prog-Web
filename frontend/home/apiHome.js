@@ -82,10 +82,13 @@ async function markAsRead(event) {
   }
 
   try {
+    const token = localStorage.getItem('authToken');
+
     const response = await fetch('http://localhost:3000/api/updateStatus', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify({ emailId, newStatus }),
     });
@@ -156,11 +159,15 @@ function displayEmails(emails) {
 }
 
 async function deleteEmail(emailId, emailItem) {
+
+  const token = localStorage.getItem('authToken');
+
   try {
     const response = await fetch('http://localhost:3000/api/deleteEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify({ emailId }),
     });
