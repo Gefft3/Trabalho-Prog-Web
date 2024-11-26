@@ -1,14 +1,15 @@
 const pool = require('../db');
 
 const getMessages = async (req, res) => {
-  const email = req.query.email;
+
+  const email = req.query.email; // Usa query string para pegar o e-mail da URL do método GET
 
   try {
     console.log('Buscando e-mails para o usuário:', email);
-
+    // Busca todos os e-mails que têm o 'recipient_email' igual ao e-mail do usuário logado
     const result = await pool.query(
       'SELECT * FROM messages WHERE recipient_email = $1 ORDER BY status DESC',
-      [email]
+      [email] // Passando o e-mail do usuário como parâmetro
     );
 
     console.log('Registros encontrados:', result.rows);
@@ -18,7 +19,8 @@ const getMessages = async (req, res) => {
       return res.status(200).json({ message: 'Sua caixa de entrada está atualizada.' });
     }
 
-    res.json(result.rows);
+    res.json(result.rows);  // Retorna os e-mails encontrados
+
   } catch (error) {
     console.error('Erro ao buscar o email:', error);
     res.status(500).json({ message: 'Erro ao buscar os e-mails.' });
@@ -58,6 +60,7 @@ const updateEmailStatus = async (req, res) => {
 
 // Função para deletar o e-mail
 const deleteEmail = async (req, res) => {
+  
   const { emailId } = req.body;
 
   if (!emailId) {

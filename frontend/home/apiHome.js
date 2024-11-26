@@ -170,7 +170,7 @@ async function deleteEmail(emailId, emailItem) {
     });
 
     if (response.ok) {
-      // Se a exclusão no banco for bem-sucedida, remova o e-mail da interface
+      // Se a exclusão no banco for bem-sucedida, remove o e-mail da interface
       emailItem.remove();  // Remove o item da lista de e-mails
 
       // Exibe o alerta de confirmação
