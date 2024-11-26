@@ -39,9 +39,10 @@ Content-Type: application/json
     "subject": "Teste de envio de email",
     "content": "Teste de envio de email",
     "status": true,
-    "senderEmail": "test@example.com",
-    "recipientEmail": "test2@example.com"
+    "senderEmail": "test2@example.com",
+    "recipientEmail": "test@example.com"
 }
+
 
 
 ### Obter informações da home

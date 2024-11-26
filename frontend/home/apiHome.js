@@ -31,9 +31,6 @@ async function getMessages() {
     const email = localStorage.getItem('email');
     const token = localStorage.getItem('authToken');
 
-    console.log('Token:', localStorage.getItem('authToken'));
-    console.log('Email:', localStorage.getItem('email'));
-
     if (!email) {
       alert('E-mail não encontrado no armazenamento local.');
       return;

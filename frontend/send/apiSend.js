@@ -4,21 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function sendEmail(event) {
 
+    const token = localStorage.getItem('authToken');
+
     event.preventDefault();
 
     // Pegando os dados do formulário
     const subject = document.getElementById('subject').value;
     const content = document.getElementById('body').value;
     const recipientEmail = document.getElementById('to').value; // E-mail do destinatário
-    const senderEmail = localStorage.getItem('userEmail'); // E-mail do remetente
-    const sendDate = new Date().toLocaleDateString('pt-BR');
-    const status = 'Novo'; // Status fixo como 'Novo'
+    const senderEmail = localStorage.getItem('email'); // E-mail do remetente
+    const sendDate = new Date().toISOString().split('T')[0];
+    const status = "Novo"; 
 
     try {
         const response = await fetch('http://localhost:3000/api/send', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
             },
             body: JSON.stringify({
                 subject,
@@ -39,7 +42,6 @@ async function sendEmail(event) {
             feedbackMessage.style.display = 'block'; // Exibe o feedback
             window.clearForm(); // Limpa o formulário
         }
-
         else {
             feedbackMessage.textContent = `Erro ao enviar e-mail: ${data.message}`;
             feedbackMessage.style.color = 'red'; // Define a cor da mensagem como vermelha

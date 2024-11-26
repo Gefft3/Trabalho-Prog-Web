@@ -4,10 +4,12 @@ const sendEmail = async (req, res) => {
     try {
         console.log('Requisição recebida na rota /api/send');
         // Obtendo dados da requisição
-        const { subject, content, status, senderEmail, recipientEmail } = req.body;
+        const { subject, content, sendDate, status, senderEmail, recipientEmail } = req.body;
 
         // Verifica se todos os campos obrigatórios foram fornecidos
-        if (!subject || !content || !status || !senderEmail || !recipientEmail) {
+
+
+        if (!subject || !content || !status || !sendDate || !senderEmail || !recipientEmail) {
             return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
         }
 
@@ -25,9 +27,9 @@ const sendEmail = async (req, res) => {
 
         // Insere o e-mail no banco de dados
         const result = await pool.query(
-            `INSERT INTO messages (subject, content, status, sender_email, recipient_email)
-             VALUES ($1, $2, $3, $4, $5) RETURNING *`,
-            [subject, content, status, senderEmail, recipientEmail]
+            `INSERT INTO messages (subject, content, status, send_date, sender_email, recipient_email)
+             VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+            [subject, content, status, sendDate, senderEmail, recipientEmail]
         );
 
         // Respondendo com o e-mail salvo no banco
