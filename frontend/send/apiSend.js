@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('writeForm').addEventListener('submit', sendEmail);
+
+    document.getElementById('logout').addEventListener('click', logout);
 });
 
 async function sendEmail(event) {
@@ -54,3 +56,10 @@ async function sendEmail(event) {
         feedbackMessage.style.display = 'block'; // Exibe o feedback
     }
 }
+
+function logout() {
+    localStorage.removeItem('email');
+    localStorage.removeItem('authToken'); 
+    alert('Você foi desconectado!');
+    window.location.href = '../login/login.html';
+  }
