@@ -32,17 +32,16 @@ async function getMessages() {
 }
 
 async function markAsRead(event) {
-
-    event.stopPropagation(); // Impede que o clique abra o e-mail
+    event.stopPropagation(); // Impede que o clique expanda o e-mail
   
     const emailItem = event.target.closest('.email-item');
     const statusElement = emailItem.querySelector('.email-info .status');
     const button = event.target; // Botão clicado
-     const emailId = emailItem.querySelector('.email-info').getAttribute('data-email-id');
+    const emailId = emailItem.getAttribute('data-email-id');  // ID do e-mail
   
     let newStatus = '';
   
-    // Verifica o status atual do e-mail e altera
+    // Altera o status e o botão
     if (statusElement.textContent === "Status: Novo") {
       statusElement.textContent = "Status: Lido";
       button.textContent = "Marcar como novo";
@@ -57,14 +56,16 @@ async function markAsRead(event) {
       newStatus = 'Novo';
     }
   
-    // Envia a atualização para o backend
+    // Atualiza o status no banco de dados
     try {
-      const response = await fetch('http://localhost:3000/api/updateStatus', {
+      const response = await fetch(`http://localhost:3000/api/update-status`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
-          emailId: emailId,
-          newStatus: newStatus,
+          emailId: emailId,  // ID do e-mail
+          newStatus: newStatus,  // Novo status a ser atualizado
         }),
       });
   
@@ -72,6 +73,8 @@ async function markAsRead(event) {
         console.log('Status atualizado com sucesso!');
       } else {
         console.error('Erro ao atualizar o status do e-mail.');
+        const data = await response.json();
+        console.error(data.message); // Exibe a mensagem de erro retornada pelo servidor
       }
     } catch (error) {
       console.error('Erro de rede ao tentar atualizar o status:', error);

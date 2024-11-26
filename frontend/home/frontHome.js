@@ -30,58 +30,58 @@ async function expandEmail(emailElement) {
 
 // Função para exibir os e-mails no formato do HTML
 function displayEmails(emails) {
-    
+
   const emailListContainer = document.querySelector('.email-list');
 
   emails.forEach(email => {
-      const emailItem = document.createElement('div');
-      emailItem.classList.add('email-item');
-      emailItem.setAttribute('onclick', 'expandEmail(this)'); // Irá associar a função de expandir ao clicar
+    const emailItem = document.createElement('div');
+    emailItem.classList.add('email-item');
+    emailItem.setAttribute('onclick', 'expandEmail(this)'); // Irá associar a função de expandir ao clicar
 
-      const emailInfo = document.createElement('div');
-      emailInfo.classList.add('email-info');
+    const emailInfo = document.createElement('div');
+    emailInfo.classList.add('email-info');
 
-      const sender = document.createElement('span');
-      sender.classList.add('sender');
-      sender.textContent = `De: ${email.sender_email}`;
+    const sender = document.createElement('span');
+    sender.classList.add('sender');
+    sender.textContent = `De: ${email.sender_email}`;
 
-      const subject = document.createElement('span');
-      subject.classList.add('subject');
-      subject.textContent = `Assunto: ${email.subject}`;
+    const subject = document.createElement('span');
+    subject.classList.add('subject');
+    subject.textContent = `Assunto: ${email.subject}`;
 
-      const status = document.createElement('span');
-      status.classList.add('status');
-      status.textContent = `Status: ${email.status}`;
+    const status = document.createElement('span');
+    status.classList.add('status');
+    status.textContent = `Status: ${email.status}`;
 
-      const date = document.createElement('span');
-      date.classList.add('date');
-      const formattedDate = new Date(email.send_date).toLocaleDateString('pt-BR');
-      date.textContent = formattedDate;
+    const date = document.createElement('span');
+    date.classList.add('date');
+    const formattedDate = new Date(email.send_date).toLocaleDateString('pt-BR');
+    date.textContent = formattedDate;
 
-      emailInfo.append(sender, subject, status, date);
+    emailInfo.append(sender, subject, status, date);
 
-      const emailBody = document.createElement('p');
-      emailBody.textContent = email.content;
+    const emailBody = document.createElement('p');
+    emailBody.textContent = email.content;
 
-      const emailActions = document.createElement('div');
-      emailActions.classList.add('email-actions');
+    const emailActions = document.createElement('div');
+    emailActions.classList.add('email-actions');
 
-      const replyButton = document.createElement('button');
-      replyButton.classList.add('reply');
-      replyButton.textContent = 'Responder';
+    const replyButton = document.createElement('button');
+    replyButton.classList.add('reply');
+    replyButton.textContent = 'Responder';
 
-      const markReadButton = document.createElement('button');
-      markReadButton.classList.add('mark-read');
-      markReadButton.textContent = 'Marcar como lida';
+    const markReadButton = document.createElement('button');
+    markReadButton.classList.add('mark-read');
+    markReadButton.textContent = 'Marcar como lida';
 
-      const deleteButton = document.createElement('button');
-      deleteButton.classList.add('delete');
-      deleteButton.textContent = 'Deletar';
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete');
+    deleteButton.textContent = 'Deletar';
 
-      emailActions.append(replyButton, markReadButton, deleteButton);
+    emailActions.append(replyButton, markReadButton, deleteButton);
 
-      emailItem.append(emailInfo, emailBody, emailActions);
-      emailListContainer.append(emailItem);
+    emailItem.append(emailInfo, emailBody, emailActions);
+    emailListContainer.append(emailItem);
   });
 }
 
